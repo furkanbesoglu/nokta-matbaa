@@ -1,0 +1,330 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ana.master.cs" Inherits="nokta_matbaa.User.Ana" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Nokta Matbaa - Matbaa & Reklamcılık</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Site Metas -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- LOADER -->
+        <div id="preloader">
+            <div class="loader">
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__bar"></div>
+                <div class="loader__ball"></div>
+            </div>
+        </div>
+        <!-- END LOADER -->
+
+
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="right-top">
+                            <div class="social-box">
+                                <ul>
+                                    <asp:Repeater ID="RepeaterSocialMedia" runat="server">
+                                        <ItemTemplate>
+                                            <li><a href="<%# Eval("Facebook") %>" class="facebook"><i class="fa fa-facebook-square"></i></a></li>
+                                            <li><a href="<%# Eval("Twitter") %>" class="twitter"><i class="fa fa-twitter-square"></i></a></li>
+                                            <li><a href="<%# Eval("instagramTwo") %>" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="<%# Eval("instagram") %>" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="https://plus.google.com/" class="googlePlus"><i class="fa fa-rss-square"></i></a></li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="left-top">
+                            <asp:Repeater ID="Repeater1" runat="server">
+                                <ItemTemplate>
+                                    <div class="email-box">
+                                        <a href="mail:<%# Eval("Mail") %>"><i class="fa fa-envelope-o" aria-hidden="true"></i><%# Eval("Mail") %></a>
+                                    </div>
+                                    <div class="phone-box">
+                                        <a href="tel:<%# Eval("Phone") %>"><i class="fa fa-phone" aria-hidden="true"></i><%# Eval("Phone") %></a>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Header-->
+
+        <header class="header header_style_01">
+            <nav class="megamenu navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <div class="navbar-header">
+                        <asp:Repeater ID="RepeaterNavbar" runat="server">
+                            <ItemTemplate>
+                                <a class="navbar-brand" href="Default.aspx">
+                                    <img src="<%# Eval("logoPhotoURL") %>" alt="image"></a>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li><a class="active" href="Default.aspx">AnaSayfa</a></li>
+                            <li><a href="#">Hizmetlerimiz</a><i style="color: black;" class="fa fa-angle-down"></i>
+                                <div class="sub-menu-1">
+                                    <ul>
+                                        <li class="hover-me"><a href="#">Matbaa</a><i style="color: black;" class="fa fa-angle-right"></i>
+                                            <div class="sub-menu-2">
+                                                <ul>
+                                                    <li><a href="MaliyeileAnlasmali.aspx">Maliye İle Anlaşmalı Matbaa</a></li>
+                                                    <li><a href="KisiyeOzelTasarimlar.aspx">Kişiye Özel Tasarımlar</a></li>
+                                                    <li><a href="NikahSekeri.aspx">Nikah Şekeri</a></li>
+                                                    <li class="hover-me-1"><a href="#">Davetiye</a><i style="color: black;" class="fa fa-angle-right"></i>
+                                                        <div class="sub-menu-3">
+                                                            <ul>
+                                                                <li class="hover-me-2"><a href="#">Erdem</a><i style="color: black;" class="fa fa-angle-right"></i>
+                                                                    <div class="sub-menu-4">
+                                                                        <ul>
+                                                                            <li><a href="Erdem.aspx">Erdem</a></li>
+                                                                            <li><a href="Butiqline.aspx">Butiqline</a></li>
+                                                                            <li><a href="Ekonom.aspx">Ekonom</a></li>
+                                                                            <li><a href="Sunnet.aspx">Sünnet</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="hover-me-2"><a href="#">İklim</a><i style="color: black;" class="fa fa-angle-right"></i>
+                                                                    <div class="sub-menu-4">
+                                                                        <ul>
+                                                                            <li><a href="İklim.aspx">İklim</a></li>
+                                                                            <li><a href="Wedding.aspx">Wedding</a></li>
+                                                                            <li><a href="Aras.aspx">Aras</a></li>
+                                                                            <li><a href="Alyans.aspx">Alyans</a></li>
+                                                                            <li><a href="Fenomen.aspx">Fenomen</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="Tabela.aspx">Tabela</a></li>
+                                        <li><a href="DijitalBaski.aspx">Dijital Baskı</a></li>
+                                        <li class="hover-me"><a href="#">Ajans Hizmetleri</a><i style="color: black;" class="fa fa-angle-right"></i>
+                                            <div class="sub-menu-2">
+                                                <ul>
+                                                    <li><a href="KurumsalKimlikCalismasi.aspx">Kurumsal Kimlik Çalışması</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li><a href="Organizasyon.aspx">Organizasyon İşleri</a></li>
+                                        <li><a href="WebSite.aspx">Web Site Tasarım</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="ReklamAjansi.aspx">Reklam Ajansı</a></li>
+                            <li><a href="Hakkimizda.aspx">Hakkımızda</a></li>
+                            <li><a href="iletisim.aspx">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <!--End Header-->
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="widget clearfix">
+                            <asp:Repeater ID="RepeaterFooter" runat="server">
+                                <ItemTemplate>
+                                    <div class="widget-title">
+                                        <img width="300" height="190" src="<%# Eval("logoPhotoURL1") %>" alt="" />
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                        <!-- end clearfix -->
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="widget clearfix">
+                            <div class="widget-title">
+                                <h3>Hızlı Linkler</h3>
+                            </div>
+
+                            <ul class="footer-links hov">
+                                <li><a href="#">Ana Sayfa <span class="icon icon-arrow-right2"></span></a></li>
+                                <li><a href="#">Hizmelerimiz <span class="icon icon-arrow-right2"></span></a></li>
+                                <li><a href="#">Reklam Ajansı <span class="icon icon-arrow-right2"></span></a></li>
+                                <li><a href="#">Hakkımızda <span class="icon icon-arrow-right2"></span></a></li>
+                                <li><a href="#">İletişim <span class="icon icon-arrow-right2"></span></a></li>
+                            </ul>
+                            <!-- end links -->
+                        </div>
+                        <!-- end clearfix -->
+                    </div>
+                    <!-- end col -->
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer-recent clearfix">
+                            <div class="widget-title">
+                                <h3>Açılış Kapanış Saatleri</h3>
+                            </div>
+
+                            <ul>
+                                <asp:Repeater ID="RepeaterOpenClose" runat="server">
+                                    <ItemTemplate>
+                                        <li>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span><%# Eval("DayRange") %></span>
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                            <span>Zaman : <%# Eval("Clock") %></span>
+                                            <h2><%# Eval("EmergencyText") %></h2>
+                                        </li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+
+                            </ul>
+
+                        </div>
+                        <!-- end clearfix -->
+                    </div>
+                    <!-- end col -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="widget footer-contact clearfix">
+                            <div class="widget-title">
+                                <h3>İletişim</h3>
+                            </div>
+
+                            <ul>
+                                <asp:Repeater ID="Repeaterİletisim" runat="server">
+                                    <ItemTemplate>
+                                        <li style="color: white"><%# Eval("Adress") %></li>
+                                        <li style="color: white">+90 <%# Eval("Phone") %></li>
+                                        <li style="color: white"><%# Eval("Mail") %></li>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
+                            <ul class="social-list">
+                                <asp:Repeater ID="RepeaterSocial" runat="server">
+                                    <ItemTemplate>
+                                        <li><a href="<%# Eval("Facebook") %>" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="<%# Eval("Twitter") %>" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="<%# Eval("instagramTwo") %>" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="<%# Eval("instagram") %>" class="instagram"><i class="fa fa-instagram"></i></a></li>
+
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </footer>
+        <!-- end footer -->
+        <div class="copyrights">
+            <div class="container">
+                <div class="footer-distributed">
+                    <div class="footer-left">
+                        <p class="footer-company-name">
+                            <script>document.write(new Date().getFullYear());</script>
+                            Tüm Hakları Saklıdır. &copy; <a href="#">Nokta Matbaa</a> Design By : <a href="#">Furkan Beşoğlu</a>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end copyrights -->
+
+        <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+
+        <!-- WhatsApp ekleme -->
+        <script type="text/javascript">
+            (function () {
+                var options = {
+                    whatsapp: "905427318090", // WhatsApp numarası
+                    call_to_action: "Merhaba, Nasıl Yardımcı Olabilirim?", // Görüntülenecek yazı
+                    position: "left", // Sağ taraf için 'right' sol taraf için 'left'
+                };
+                var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+                s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+                var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+            })();
+        </script>
+
+        <!-- ALL JS FILES -->
+        <script src="js/all.js"></script>
+        <!-- ALL PLUGINS -->
+        <script src="js/custom.js"></script>
+        <script src="js/portfolio.js"></script>
+        <script src="js/hoverdir.js"></script>
+        <!-- Slider Orga -->
+        <script src="js/jssor.slider-28.0.0.min.js"></script>
+
+
+
+    </form>
+</body>
+</html>

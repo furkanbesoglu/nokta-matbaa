@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ana.master.cs" Inherits="nokta_matbaa.AdminPaneli.ana" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Nokta Matbaa Admin Paneli</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <div class="wrapper d-flex align-items-stretch">
+                <nav id="sidebar">
+                    <div class="p-4 pt-5">
+                        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(../AdminPaneli/images/nokta-logo.png);"></a>
+                        <ul class="list-unstyled components mb-5">
+                            <li class="active">
+                                <a href="#homeSubmenu1" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">ANASAYFA</a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu1">
+                                    <li>
+                                        <a href="QualityList.aspx">Static Veri</a>
+                                    </li>
+                                   <li>
+                                        <a href="ServicesList.aspx">Hizmetler</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">HİZMETLERİMİZ</a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu">
+                                    <li>
+                                        <a href="TabelaList.aspx">Tabela</a>
+                                    </li>
+                                    <li>
+                                        <a href="DigitalList.aspx">Dijital Baskı</a>
+                                    </li>
+                                    <li>
+                                        <a href="OrganizasyonList.aspx">Organizasyon İşleri</a>
+                                    </li>
+                                    <li>
+                                        <a href="WebSiteList.aspx">Web Site Tasarımı</a>
+                                    </li>
+                                    <li>
+                                        <a href="Hizmetlerimiz.aspx">Hizmetlerimiz</a>
+                                    </li>
+                                </ul>
+                            </li>
+                             <li>
+                                <a href="sliderContentList.aspx">SLİDER İÇERİK GÜNCELLE</a>
+                            </li>
+                            <li>
+                                <a href="logoList.aspx">LOGO GÜNCELLE</a>
+                            </li>
+                            <li>
+                                <a href="ReferansList.aspx">REFERANSLAR</a>
+                            </li>
+                             <li>
+                                <a href="SocialMedia.aspx">SOSYAL MEDYA</a>
+                            </li>
+                            <li>
+                                <a href="AdvertisingAgencyLİst.aspx">REKLAM AJANSI</a>
+                            </li>
+                            <li>
+                                <a href="AboutList.aspx">HAKKIMIZDA</a>
+                            </li>
+                            <li>
+                                <a href="ContactList.aspx">İLETİŞİM</a>
+                            </li>
+                             <li>
+                                <a href="AdminList.aspx">Şifremi Yenile</a>
+                            </li>
+
+                        </ul>
+
+                        <div class="footer">
+                            <asp:Label ID="lblsession" runat="server" Visible="false" Text=""></asp:Label>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <!-- Page Content  -->
+                <div id="content" class="p-4 p-md-5">
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="container-fluid">
+
+                            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                                <i class="fa fa-bars"></i>
+                                <span class="sr-only">Toggle Menu</span>
+                            </button>
+                            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="nav navbar-nav ml-auto">
+                                    <li class="nav-item active">
+                                        <asp:Button ID="btnCikis" runat="server" CssClass="btn btn-danger"  class="nav-link" Text="Çıkış Yap" OnClick="btnCikis_Click" />
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/main.js"></script>
+
+        </div>
+    </form>
+</body>
+</html>
+
+
+

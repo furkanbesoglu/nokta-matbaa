@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CF33ABA-08E9-473C-A96F-510273A1160B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nokta_matbaa</RootNamespace>
+    <AssemblyName>nokta-matbaa</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxDiagram.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.7\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPaneli\AboutGuncelle.aspx" />
+    <Content Include="AdminPaneli\AboutList.aspx" />
+    <Content Include="AdminPaneli\AdminGuncelle.aspx" />
+    <Content Include="AdminPaneli\AdminList.aspx" />
+    <Content Include="AdminPaneli\AdvertisingAgencyGuncelle.aspx" />
+    <Content Include="AdminPaneli\AdvertisingAgencyLİst.aspx" />
+    <Content Include="AdminPaneli\AdvertisingAgencyNEW.aspx" />
+    <Content Include="AdminPaneli\AdvertisingAgencySil.aspx" />
+    <Content Include="AdminPaneli\ContactGuncelle.aspx" />
+    <Content Include="AdminPaneli\ContactList.aspx" />
+    <Content Include="AdminPaneli\css\bootstrap.min.css" />
+    <Content Include="AdminPaneli\css\bootstrap\mixins\_border-radius.css" />
+    <Content Include="AdminPaneli\css\bootstrap\mixins\_screen-reader.css" />
+    <Content Include="AdminPaneli\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="AdminPaneli\css\bootstrap\utilities\_stretched-link.css" />
+    <Content Include="AdminPaneli\css\bootstrap\_media.css" />
+    <Content Include="AdminPaneli\css\style.css" />
+    <Content Include="AdminPaneli\DigitalGuncelle.aspx" />
+    <Content Include="AdminPaneli\DigitalList.aspx" />
+    <Content Include="AdminPaneli\DigitalNEW.aspx" />
+    <Content Include="AdminPaneli\DigitalSil.aspx" />
+    <Content Include="AdminPaneli\Hizmetlerimiz.aspx" />
+    <Content Include="AdminPaneli\HizmetlerimizGuncelle.aspx" />
+    <Content Include="AdminPaneli\HizmetSil.aspx" />
+    <Content Include="AdminPaneli\images\nokta-logo.png" />
+    <Content Include="AdminPaneli\js\bootstrap.min.js" />
+    <Content Include="AdminPaneli\js\jquery.min.js" />
+    <Content Include="AdminPaneli\js\main.js" />
+    <Content Include="AdminPaneli\js\popper.js" />
+    <Content Include="AdminPaneli\logoGuncelle.aspx" />
+    <Content Include="AdminPaneli\logoList.aspx" />
+    <Content Include="AdminPaneli\OpenClosedGuncelle.aspx" />
+    <Content Include="AdminPaneli\OrganizasyonGuncelle.aspx" />
+    <Content Include="AdminPaneli\OrganizasyonList.aspx" />
+    <Content Include="AdminPaneli\OrganizasyonNEW.aspx" />
+    <Content Include="AdminPaneli\OrganizasyonSil.aspx" />
+    <Content Include="AdminPaneli\Overview1.aspx" />
+    <Content Include="AdminPaneli\Overview1Guncelle.aspx" />
+    <Content Include="AdminPaneli\Overwiev.aspx" />
+    <Content Include="AdminPaneli\OverwiewGuncelle12.aspx" />
+    <Content Include="AdminPaneli\QualityGuncelle.aspx" />
+    <Content Include="AdminPaneli\QualityList.aspx" />
+    <Content Include="AdminPaneli\ReferansEkle.aspx" />
+    <Content Include="AdminPaneli\ReferansGuncelle.aspx" />
+    <Content Include="AdminPaneli\ReferanSil.aspx" />
+    <Content Include="AdminPaneli\ReferansList.aspx" />
+    <Content Include="AdminPaneli\ServicesEkle.aspx" />
+    <Content Include="AdminPaneli\ServicesGuncelle.aspx" />
+    <Content Include="AdminPaneli\ServicesList.aspx" />
+    <Content Include="AdminPaneli\SliderContentEkle.aspx" />
+    <Content Include="AdminPaneli\sliderContentGüncelle.aspx" />
+    <Content Include="AdminPaneli\sliderContentList.aspx" />
+    <Content Include="AdminPaneli\SocialMedia.aspx" />
+    <Content Include="AdminPaneli\SosyalMediaGuncelle.aspx" />
+    <Content Include="AdminPaneli\TabelaEkle.aspx" />
+    <Content Include="AdminPaneli\TabelaList.aspx" />
+    <Content Include="AdminPaneli\TabelaSil.aspx" />
+    <Content Include="AdminPaneli\WebSiteGuncelle.aspx" />
+    <Content Include="AdminPaneli\WebSiteList.aspx" />
+    <Content Include="AdminPaneli\WebSiteNEW.aspx" />
+    <Content Include="AdminPaneli\WebSiteSil.aspx" />
+    <Content Include="AdminPaneli\YeniHizmetEkle.aspx" />
+    <Content Include="AdminPaneli\YeniQualityEkle.aspx" />
+    <Content Include="Alyans.aspx" />
+    <Content Include="Aras.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Fenomen.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="AdminPaneli\ana.Master" />
+    <Content Include="AdminPaneli\css\.DS_Store" />
+    <Content Include="AdminPaneli\css\bootstrap\.DS_Store" />
+    <Content Include="AdminPaneli\css\bootstrap\mixins\.DS_Store" />
+    <Content Include="AdminPaneli\fonts\.DS_Store" />
+    <Content Include="AdminPaneli\js\.DS_Store" />
+    <Content Include="AdminPaneli\scss\.DS_Store" />
+    <Content Include="AdminPaneli\scss\bootstrap\.DS_Store" />
+    <Content Include="AdminPaneli\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\bootstrap.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_alert.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_badge.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_button-group.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_buttons.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_card.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_carousel.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_close.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_code.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_dropdown.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_forms.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_functions.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_grid.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_images.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_input-group.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_list-group.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_media.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_mixins.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_modal.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_nav.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_navbar.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_pagination.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_popover.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_print.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_progress.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_reboot.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_root.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_spinners.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_tables.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_toasts.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_tooltip.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_transitions.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_type.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_utilities.scss" />
+    <Content Include="AdminPaneli\scss\bootstrap\_variables.scss" />
+    <Content Include="AdminPaneli\scss\style.scss" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\SayfaFoto.jpeg" />
+    <Content Include="images\SayfaFoto1.jpeg" />
+    <Content Include="uploads\Banner1.jpeg" />
+    <Content Include="uploads\Banner2.jpeg" />
+    <Content Include="uploads\Banner3.jpeg" />
+    <Content Include="uploads\Referanimage.jpeg" />
+    <Content Include="uploads\Referans.jpeg" />
+    <Content Include="Wedding.aspx" />
+    <Content Include="İklim.aspx" />
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Content>
+    <Content Include="images\3.png" />
+    <Content Include="Login\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login\fonts\FontAwesome.otf" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile2.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Login\adminLogin.aspx" />
+    <Content Include="Login\css\font-awesome.css" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\images\1.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="AdminPaneli\TabelaGuncelle.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Butiqline.aspx" />
+    <Content Include="css2\color.css" />
+    <Content Include="css2\custom.css" />
+    <Content Include="css2\normalize.css" />
+    <Content Include="css2\style1.css" />
+    <Content Include="css2\style.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\custom.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\icomoon.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="DavetiyeDetay.aspx" />
+    <Content Include="DijitalBaski.aspx" />
+    <Content Include="Ekonom.aspx" />
+    <Content Include="Erdem.aspx" />
+    <Content Include="fonts\flaticon.css" />
+    <Content Include="fonts\flaticon.html" />
+    <Content Include="fonts\Flaticon.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Hakkimizda.aspx" />
+    <Content Include="iletisim.aspx" />
+    <Content Include="images\4.png" />
+    <Content Include="images\Davetiye.jpg" />
+    <Content Include="images\kisiye-ozel-etiket-tasarimi.png" />
+    <Content Include="images\logos\22-logo.png" />
+    <Content Include="images\ajax-loader.gif" />
+    <Content Include="images\apple-touch-icon.png" />
+    <Content Include="images\bg.png" />
+    <Content Include="images\logos\2.png" />
+    <Content Include="images\logos\nokta-logo.png" />
+    <Content Include="images\MAliye.jpg" />
+    <Content Include="images\NikahSekeri.jpg" />
+    <Content Include="images\organizasyon.jpg" />
+    <Content Include="images\phonebg.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="images\prettyPhoto\default\loader.gif" />
+    <Content Include="images\prettyPhoto\default\sprite.png" />
+    <Content Include="images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="images\web-site-tarsarimi.jpg" />
+    <Content Include="js\all.js" />
+    <Content Include="js\animate.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\hoverdir.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\jquery.vide.js" />
+    <Content Include="js\map.js" />
+    <Content Include="js\modernizer.js" />
+    <Content Include="js\owl.carousel.js" />
+    <Content Include="js\portfolio.js" />
+    <Content Include="js\retina.js" />
+    <Content Include="js\scroll.js" />
+    <Content Include="KisiyeOzelTasarimlar.aspx" />
+    <Content Include="KurumsalKimlikCalismasi.aspx" />
+    <Content Include="MaliyeileAnlasmali.aspx" />
+    <Content Include="NikahSekeri.aspx" />
+    <Content Include="Organizasyon.aspx" />
+    <Content Include="ReklamAjansi.aspx" />
+    <Content Include="style.css" />
+    <Content Include="Sunnet.aspx" />
+    <Content Include="Tabela.aspx" />
+    <Content Include="uploads\about_01.jpg" />
+    <Content Include="uploads\about_02.jpg" />
+    <Content Include="uploads\app_parallax_03.jpg" />
+    <Content Include="uploads\device_03.png" />
+    <Content Include="uploads\dijital-baski.jpg" />
+    <Content Include="uploads\features_01.jpg" />
+    <Content Include="uploads\features_02.jpg" />
+    <Content Include="uploads\features_03.jpg" />
+    <Content Include="uploads\inner-bg.jpg" />
+    <Content Include="uploads\ipad.png" />
+    <Content Include="uploads\logo_01.png" />
+    <Content Include="uploads\logo_02.png" />
+    <Content Include="uploads\logo_03.png" />
+    <Content Include="uploads\logo_04.png" />
+    <Content Include="uploads\logo_05.png" />
+    <Content Include="uploads\logo_06.png" />
+    <Content Include="uploads\Matbaa.jpeg" />
+    <Content Include="uploads\Orga.jpg" />
+    <Content Include="uploads\parallax_02.jpg" />
+    <Content Include="uploads\parallax_02.png" />
+    <Content Include="uploads\parallax_03.jpg" />
+    <Content Include="uploads\parallax_03.png" />
+    <Content Include="uploads\parallax_04.jpg" />
+    <Content Include="uploads\parallax_05.png" />
+    <Content Include="uploads\parallax_11.jpg" />
+    <Content Include="uploads\parallax_17.jpg" />
+    <Content Include="uploads\portfolio_01.jpg" />
+    <Content Include="uploads\portfolio_02.jpg" />
+    <Content Include="uploads\portfolio_03.jpg" />
+    <Content Include="uploads\portfolio_04.jpg" />
+    <Content Include="uploads\portfolio_05.jpg" />
+    <Content Include="uploads\portfolio_06.jpg" />
+    <Content Include="uploads\portfolio_07.jpg" />
+    <Content Include="uploads\portfolio_08.jpg" />
+    <Content Include="uploads\portfolio_09.jpg" />
+    <Content Include="uploads\portfolio_10.jpg" />
+    <Content Include="uploads\portfolio_11.jpg" />
+    <Content Include="uploads\portfolio_12.jpg" />
+    <Content Include="uploads\slider_01.jpg" />
+    <Content Include="uploads\slider_02.jpg" />
+    <Content Include="uploads\slider_03.jpg" />
+    <Content Include="uploads\TAbela.jpg" />
+    <Content Include="uploads\testi_01.png" />
+    <Content Include="uploads\testi_02.png" />
+    <Content Include="uploads\testi_03.png" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="WebSite.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPaneli\AboutGuncelle.aspx.cs">
+      <DependentUpon>AboutGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AboutGuncelle.aspx.designer.cs">
+      <DependentUpon>AboutGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AboutList.aspx.cs">
+      <DependentUpon>AboutList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AboutList.aspx.designer.cs">
+      <DependentUpon>AboutList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AdminGuncelle.aspx.cs">
+      <DependentUpon>AdminGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AdminGuncelle.aspx.designer.cs">
+      <DependentUpon>AdminGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AdminList.aspx.cs">
+      <DependentUpon>AdminList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AdminList.aspx.designer.cs">
+      <DependentUpon>AdminList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencyGuncelle.aspx.cs">
+      <DependentUpon>AdvertisingAgencyGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencyGuncelle.aspx.designer.cs">
+      <DependentUpon>AdvertisingAgencyGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencyLİst.aspx.cs">
+      <DependentUpon>AdvertisingAgencyLİst.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencyLİst.aspx.designer.cs">
+      <DependentUpon>AdvertisingAgencyLİst.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencyNEW.aspx.cs">
+      <DependentUpon>AdvertisingAgencyNEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencyNEW.aspx.designer.cs">
+      <DependentUpon>AdvertisingAgencyNEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencySil.aspx.cs">
+      <DependentUpon>AdvertisingAgencySil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\AdvertisingAgencySil.aspx.designer.cs">
+      <DependentUpon>AdvertisingAgencySil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ana.Master.cs">
+      <DependentUpon>ana.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ana.Master.designer.cs">
+      <DependentUpon>ana.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ContactGuncelle.aspx.cs">
+      <DependentUpon>ContactGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ContactGuncelle.aspx.designer.cs">
+      <DependentUpon>ContactGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ContactList.aspx.cs">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ContactList.aspx.designer.cs">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalGuncelle.aspx.cs">
+      <DependentUpon>DigitalGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalGuncelle.aspx.designer.cs">
+      <DependentUpon>DigitalGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalList.aspx.cs">
+      <DependentUpon>DigitalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalList.aspx.designer.cs">
+      <DependentUpon>DigitalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalNEW.aspx.cs">
+      <DependentUpon>DigitalNEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalNEW.aspx.designer.cs">
+      <DependentUpon>DigitalNEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalSil.aspx.cs">
+      <DependentUpon>DigitalSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\DigitalSil.aspx.designer.cs">
+      <DependentUpon>DigitalSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\Hizmetlerimiz.aspx.cs">
+      <DependentUpon>Hizmetlerimiz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\Hizmetlerimiz.aspx.designer.cs">
+      <DependentUpon>Hizmetlerimiz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\HizmetlerimizGuncelle.aspx.cs">
+      <DependentUpon>HizmetlerimizGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\HizmetlerimizGuncelle.aspx.designer.cs">
+      <DependentUpon>HizmetlerimizGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\HizmetSil.aspx.cs">
+      <DependentUpon>HizmetSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\HizmetSil.aspx.designer.cs">
+      <DependentUpon>HizmetSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\logoGuncelle.aspx.cs">
+      <DependentUpon>logoGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\logoGuncelle.aspx.designer.cs">
+      <DependentUpon>logoGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\logoList.aspx.cs">
+      <DependentUpon>logoList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\logoList.aspx.designer.cs">
+      <DependentUpon>logoList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\OpenClosedGuncelle.aspx.cs">
+      <DependentUpon>OpenClosedGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\OpenClosedGuncelle.aspx.designer.cs">
+      <DependentUpon>OpenClosedGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonGuncelle.aspx.cs">
+      <DependentUpon>OrganizasyonGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonGuncelle.aspx.designer.cs">
+      <DependentUpon>OrganizasyonGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonList.aspx.cs">
+      <DependentUpon>OrganizasyonList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonList.aspx.designer.cs">
+      <DependentUpon>OrganizasyonList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonNEW.aspx.cs">
+      <DependentUpon>OrganizasyonNEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonNEW.aspx.designer.cs">
+      <DependentUpon>OrganizasyonNEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonSil.aspx.cs">
+      <DependentUpon>OrganizasyonSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\OrganizasyonSil.aspx.designer.cs">
+      <DependentUpon>OrganizasyonSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\Overview1.aspx.cs">
+      <DependentUpon>Overview1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\Overview1.aspx.designer.cs">
+      <DependentUpon>Overview1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\Overview1Guncelle.aspx.cs">
+      <DependentUpon>Overview1Guncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\Overview1Guncelle.aspx.designer.cs">
+      <DependentUpon>Overview1Guncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\Overwiev.aspx.cs">
+      <DependentUpon>Overwiev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\Overwiev.aspx.designer.cs">
+      <DependentUpon>Overwiev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\OverwiewGuncelle12.aspx.cs">
+      <DependentUpon>OverwiewGuncelle12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\OverwiewGuncelle12.aspx.designer.cs">
+      <DependentUpon>OverwiewGuncelle12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\QualityGuncelle.aspx.cs">
+      <DependentUpon>QualityGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\QualityGuncelle.aspx.designer.cs">
+      <DependentUpon>QualityGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\QualityList.aspx.cs">
+      <DependentUpon>QualityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\QualityList.aspx.designer.cs">
+      <DependentUpon>QualityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferansEkle.aspx.cs">
+      <DependentUpon>ReferansEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferansEkle.aspx.designer.cs">
+      <DependentUpon>ReferansEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferansGuncelle.aspx.cs">
+      <DependentUpon>ReferansGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferansGuncelle.aspx.designer.cs">
+      <DependentUpon>ReferansGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferanSil.aspx.cs">
+      <DependentUpon>ReferanSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferanSil.aspx.designer.cs">
+      <DependentUpon>ReferanSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferansList.aspx.cs">
+      <DependentUpon>ReferansList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ReferansList.aspx.designer.cs">
+      <DependentUpon>ReferansList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ServicesEkle.aspx.cs">
+      <DependentUpon>ServicesEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ServicesEkle.aspx.designer.cs">
+      <DependentUpon>ServicesEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ServicesGuncelle.aspx.cs">
+      <DependentUpon>ServicesGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ServicesGuncelle.aspx.designer.cs">
+      <DependentUpon>ServicesGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\ServicesList.aspx.cs">
+      <DependentUpon>ServicesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\ServicesList.aspx.designer.cs">
+      <DependentUpon>ServicesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\SliderContentEkle.aspx.cs">
+      <DependentUpon>SliderContentEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\SliderContentEkle.aspx.designer.cs">
+      <DependentUpon>SliderContentEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\sliderContentGüncelle.aspx.cs">
+      <DependentUpon>sliderContentGüncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\sliderContentGüncelle.aspx.designer.cs">
+      <DependentUpon>sliderContentGüncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\sliderContentList.aspx.cs">
+      <DependentUpon>sliderContentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\sliderContentList.aspx.designer.cs">
+      <DependentUpon>sliderContentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\SocialMedia.aspx.cs">
+      <DependentUpon>SocialMedia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\SocialMedia.aspx.designer.cs">
+      <DependentUpon>SocialMedia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\SosyalMediaGuncelle.aspx.cs">
+      <DependentUpon>SosyalMediaGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\SosyalMediaGuncelle.aspx.designer.cs">
+      <DependentUpon>SosyalMediaGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaEkle.aspx.cs">
+      <DependentUpon>TabelaEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaEkle.aspx.designer.cs">
+      <DependentUpon>TabelaEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaList.aspx.cs">
+      <DependentUpon>TabelaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaList.aspx.designer.cs">
+      <DependentUpon>TabelaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaSil.aspx.cs">
+      <DependentUpon>TabelaSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaSil.aspx.designer.cs">
+      <DependentUpon>TabelaSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteGuncelle.aspx.cs">
+      <DependentUpon>WebSiteGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteGuncelle.aspx.designer.cs">
+      <DependentUpon>WebSiteGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteList.aspx.cs">
+      <DependentUpon>WebSiteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteList.aspx.designer.cs">
+      <DependentUpon>WebSiteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteNEW.aspx.cs">
+      <DependentUpon>WebSiteNEW.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteNEW.aspx.designer.cs">
+      <DependentUpon>WebSiteNEW.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteSil.aspx.cs">
+      <DependentUpon>WebSiteSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\WebSiteSil.aspx.designer.cs">
+      <DependentUpon>WebSiteSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\YeniHizmetEkle.aspx.cs">
+      <DependentUpon>YeniHizmetEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\YeniHizmetEkle.aspx.designer.cs">
+      <DependentUpon>YeniHizmetEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPaneli\YeniQualityEkle.aspx.cs">
+      <DependentUpon>YeniQualityEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\YeniQualityEkle.aspx.designer.cs">
+      <DependentUpon>YeniQualityEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Alyans.aspx.cs">
+      <DependentUpon>Alyans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alyans.aspx.designer.cs">
+      <DependentUpon>Alyans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Aras.aspx.cs">
+      <DependentUpon>Aras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aras.aspx.designer.cs">
+      <DependentUpon>Aras.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Fenomen.aspx.cs">
+      <DependentUpon>Fenomen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fenomen.aspx.designer.cs">
+      <DependentUpon>Fenomen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login\adminLogin.aspx.cs">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\adminLogin.aspx.designer.cs">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="methodlar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AdminPaneli\TabelaGuncelle.aspx.cs">
+      <DependentUpon>TabelaGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPaneli\TabelaGuncelle.aspx.designer.cs">
+      <DependentUpon>TabelaGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ana.Master.cs">
+      <DependentUpon>Ana.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ana.Master.designer.cs">
+      <DependentUpon>Ana.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Butiqline.aspx.cs">
+      <DependentUpon>Butiqline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Butiqline.aspx.designer.cs">
+      <DependentUpon>Butiqline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DavetiyeDetay.aspx.cs">
+      <DependentUpon>DavetiyeDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DavetiyeDetay.aspx.designer.cs">
+      <DependentUpon>DavetiyeDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DijitalBaski.aspx.cs">
+      <DependentUpon>DijitalBaski.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DijitalBaski.aspx.designer.cs">
+      <DependentUpon>DijitalBaski.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ekonom.aspx.cs">
+      <DependentUpon>Ekonom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ekonom.aspx.designer.cs">
+      <DependentUpon>Ekonom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erdem.aspx.cs">
+      <DependentUpon>Erdem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erdem.aspx.designer.cs">
+      <DependentUpon>Erdem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkimizda.aspx.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hakkimizda.aspx.designer.cs">
+      <DependentUpon>Hakkimizda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iletisim.aspx.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iletisim.aspx.designer.cs">
+      <DependentUpon>iletisim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KisiyeOzelTasarimlar.aspx.cs">
+      <DependentUpon>KisiyeOzelTasarimlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KisiyeOzelTasarimlar.aspx.designer.cs">
+      <DependentUpon>KisiyeOzelTasarimlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KurumsalKimlikCalismasi.aspx.cs">
+      <DependentUpon>KurumsalKimlikCalismasi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KurumsalKimlikCalismasi.aspx.designer.cs">
+      <DependentUpon>KurumsalKimlikCalismasi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaliyeileAnlasmali.aspx.cs">
+      <DependentUpon>MaliyeileAnlasmali.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaliyeileAnlasmali.aspx.designer.cs">
+      <DependentUpon>MaliyeileAnlasmali.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NikahSekeri.aspx.cs">
+      <DependentUpon>NikahSekeri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NikahSekeri.aspx.designer.cs">
+      <DependentUpon>NikahSekeri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Organizasyon.aspx.cs">
+      <DependentUpon>Organizasyon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Organizasyon.aspx.designer.cs">
+      <DependentUpon>Organizasyon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReklamAjansi.aspx.cs">
+      <DependentUpon>ReklamAjansi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReklamAjansi.aspx.designer.cs">
+      <DependentUpon>ReklamAjansi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sunnet.aspx.cs">
+      <DependentUpon>Sunnet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sunnet.aspx.designer.cs">
+      <DependentUpon>Sunnet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tabela.aspx.cs">
+      <DependentUpon>Tabela.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tabela.aspx.designer.cs">
+      <DependentUpon>Tabela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSite.aspx.cs">
+      <DependentUpon>WebSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebSite.aspx.designer.cs">
+      <DependentUpon>WebSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wedding.aspx.cs">
+      <DependentUpon>Wedding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wedding.aspx.designer.cs">
+      <DependentUpon>Wedding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="İklim.aspx.cs">
+      <DependentUpon>İklim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="İklim.aspx.designer.cs">
+      <DependentUpon>İklim.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Ana.Master" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="fonts\Flaticon.eot" />
+    <Content Include="fonts\Flaticon.ttf" />
+    <Content Include="fonts\Flaticon.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\IcoMoon-Free.ttf" />
+    <Content Include="fonts\_flaticon.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54533</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54533/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
